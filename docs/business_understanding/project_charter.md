@@ -28,18 +28,17 @@
 
 | Etapa | Duración Estimada | Fechas |
 |------|---------|-------|
-| Entendimiento del negocio y carga de datos | 2 semanas | del 1 de mayo al 15 de mayo |
-| Preprocesamiento, análisis exploratorio | 4 semanas | del 16 de mayo al 15 de junio |
-| Modelamiento y extracción de características | 4 semanas | del 16 de junio al 15 de julio |
-| Despliegue | 2 semanas | del 16 de julio al 31 de julio |
-| Evaluación y entrega final | 3 semanas | del 1 de agosto al 21 de agosto |
+| Entendimiento del negocio y carga de datos | 1 semana | del 14 de noviembre al 20 de noviembre de 2025 |
+| Preprocesamiento y análisis exploratorio de datos| 1 semana1 | del 21 de noviembre al 27 de noviembre de 2025 |
+| Modelamiento y extracción de características | 1 semana | del 28 de noviembre al 4 de diciembre de 2025 |
+| Despliegue | 6 dias | del 5 de diciembre al 10 de diciembre de 2025 |
+| Evaluación y entrega final | 4 dias | del 11 de diciembre al 14 de diciembre de 2025|
 
-Hay que tener en cuenta que estas fechas son de ejemplo, estas deben ajustarse de acuerdo al proyecto.
 
 ## Equipo del Proyecto
 
-- [Nombre y cargo del líder del proyecto]
-- [Nombre y cargo de los miembros del equipo]
+- David Francisco Ortiz Gutierrez (david.f.ortizg@gmail.com)
+- Fabián Camilo Rojas Beltrán (fcrojasb@unal.edu.co)
 
 ## Presupuesto
 
