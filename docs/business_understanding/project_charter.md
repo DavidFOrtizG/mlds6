@@ -29,7 +29,7 @@
 | Etapa | Duración Estimada | Fechas |
 |------|---------|-------|
 | Entendimiento del negocio y carga de datos | 1 semana | del 14 de noviembre al 20 de noviembre de 2025 |
-| Preprocesamiento y análisis exploratorio de datos| 1 semana1 | del 21 de noviembre al 27 de noviembre de 2025 |
+| Preprocesamiento y análisis exploratorio de datos| 1 semana | del 21 de noviembre al 27 de noviembre de 2025 |
 | Modelamiento y extracción de características | 1 semana | del 28 de noviembre al 4 de diciembre de 2025 |
 | Despliegue | 6 dias | del 5 de diciembre al 10 de diciembre de 2025 |
 | Evaluación y entrega final | 4 dias | del 11 de diciembre al 14 de diciembre de 2025|
