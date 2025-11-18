@@ -1,8 +1,9 @@
+
 # Project Charter - Entendimiento del Negocio
 
 ## Nombre del Proyecto
 
-[Nombre del proyecto aquí]
+Detección letras Lenguaje de Señas ASI: vision por computadora
 
 ## Objetivo del Proyecto
 
