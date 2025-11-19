@@ -27,8 +27,11 @@ Las fotos serán subidas por el cliente por medio de una página web, y luego el
 ### Excluye:
 
 - No podrá procesar videos cargados ni en tiempo real de señas. Sólo imágenes cargadas.
+
 - No se espera que detecte letras del alfabeto ASL, no tiene capacidad de detectar palabras o frases completas.
+
 - El sistema sólo podrá detectar señas del lenguaje ASL, no otras variantes (Lenguaje de Señas Colombiano, etc.)
+
 - No se desarrollara una aplicación móvil para ningún sistema operativo, sólo funcionara a través de una página web.
 
 ## Metodología
@@ -67,7 +70,7 @@ La metodología del proyecto seguirá un enfoque iterativo y basado en TSDP. Ini
 
 ## Stakeholders
 
-- Instituciones educativas, estudiantes, docentes personas con discapacidades auditivas y de habla.
+- Instituciones educativas, estudiantes, docentes, personas con discapacidades auditivas y de habla.
 - Los integrantes de las instituciones educativas actúan como validadores de la funcionalidad de la herramienta como instrumento para la enseñanza y el aprendizaje del lenguaje de señas. A su vez, personas con discapacidades auditivas y del habla, validaran la herramienta como aplicación para la asistencia básica.
 - Expectativa: crear una interfaz intuitiva y sencilla, con predicciones de las fotos de señas confiables.
 
