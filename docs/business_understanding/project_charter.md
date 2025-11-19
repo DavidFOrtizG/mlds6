@@ -51,6 +51,7 @@ La metodología del proyecto seguirá un enfoque iterativo y basado en TSDP. Ini
 ## Equipo del Proyecto
 
 - David Francisco Ortiz Gutiérrez (david.f.ortizg@gmail.com)
+
 - Fabián Camilo Rojas Beltrán (fcrojasb@unal.edu.co)
 
 ## Presupuesto
@@ -71,10 +72,13 @@ La metodología del proyecto seguirá un enfoque iterativo y basado en TSDP. Ini
 ## Stakeholders
 
 - Instituciones educativas, estudiantes, docentes, personas con discapacidades auditivas y de habla.
+
 - Los integrantes de las instituciones educativas actúan como validadores de la funcionalidad de la herramienta como instrumento para la enseñanza y el aprendizaje del lenguaje de señas. A su vez, personas con discapacidades auditivas y del habla, validaran la herramienta como aplicación para la asistencia básica.
+
 - Expectativa: crear una interfaz intuitiva y sencilla, con predicciones de las fotos de señas confiables.
 
 ## Aprobaciones
 
 - Científico de Datos: David Francisco Ortiz Gutiérrez
+
 - Científico de Datos: Fabián Camilo Rojas Beltrán
