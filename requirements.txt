@@ -7,5 +7,6 @@ dvc
 dvc-gs
 matplotlib
 rembg
+rembg[gpu]
 onnxruntime
 tqdm
