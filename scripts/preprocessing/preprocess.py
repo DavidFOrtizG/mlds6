@@ -5,6 +5,29 @@ import cv2
 import os
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from tqdm import tqdm
+import tarfile
+
+def compress_preprocessed(pre_path="/content/mlds6/data/preprocessed",
+                          compressed_dir="/content/mlds6/data_compressed",
+                          tar_name="data_preprocessed.tar"):
+    """
+    Comprime la carpeta 'data/preprocessed/' en un archivo .tar
+    dentro de la carpeta 'data_compressed/'.
+    """
+    os.makedirs(compressed_dir, exist_ok=True)
+
+    tar_path = os.path.join(compressed_dir, tar_name)
+
+    # Si existe un tar previo, borrarlo
+    if os.path.exists(tar_path):
+        os.remove(tar_path)
+
+    print(f"\nCreando archivo comprimido: {tar_path}")
+
+    with tarfile.open(tar_path, "w") as tar:
+        tar.add(pre_path, arcname=os.path.basename(pre_path))
+
+    print(f"TAR creado correctamente en: {tar_path}\n")
 
 
 def init_gpu_session():
@@ -64,7 +87,7 @@ def process_single_file(args):
     return True
 
 
-def preprocess_all(raw, output, workers=-1):
+def preprocess_all(raw, output, workers=4):
     tasks = []
 
     # Listar carpetas antes del procesamiento
@@ -94,3 +117,9 @@ def preprocess_all(raw, output, workers=-1):
 if __name__ == "__main__":
     print("Starting Preprocessing with GPU")
     preprocess_all("/content/mlds6/data/raw", "/content/mlds6/data/preprocessed", workers=4)
+
+    compress_preprocessed(
+        pre_path="/content/mlds6/data/preprocessed",
+        compressed_dir="/content/mlds6/data_compressed",
+        tar_name="data_preprocessed.tar"
+    )
