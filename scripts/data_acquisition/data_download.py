@@ -23,6 +23,6 @@ if __name__ == "__main__":
 
     api.dataset_download_files(
         'grassknoted/asl-alphabet',   
-        path='../../../data/raw/asl-alphabet',
+        path='../../data/raw/asl-alphabet',
         unzip=True
     )
