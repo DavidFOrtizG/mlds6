@@ -1,6 +1,6 @@
 outs:
-- md5: 6f8dd5f8dfcf60f6293ff8b738baa5b6.dir
-  size: 1262356480
-  nfiles: 1
+- md5: 4f0b737d3267a7164c32f3093d05c4d8.dir
+  size: 1916088320
+  nfiles: 2
   hash: md5
   path: data_compressed
