@@ -6,3 +6,6 @@ keras
 dvc
 dvc-gs
 matplotlib
+rembg
+onnxruntime
+tqdm
