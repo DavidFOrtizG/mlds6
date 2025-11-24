@@ -3,4 +3,5 @@
 env_vars*
 *credentials*
 **/build/*
+/data_compressed
 /data

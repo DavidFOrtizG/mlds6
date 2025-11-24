@@ -10,3 +10,4 @@ rembg
 rembg[gpu]
 onnxruntime
 tqdm
+kaggle
