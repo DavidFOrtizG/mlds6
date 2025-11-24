@@ -8,6 +8,6 @@ dvc-gs
 matplotlib
 rembg
 rembg[gpu]
-onnxruntime
+onnxruntime-gpu
 tqdm
 kaggle
