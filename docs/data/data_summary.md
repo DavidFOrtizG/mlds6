@@ -5,7 +5,7 @@ Este Dataset contiene imágenes de señas del Lenguaje de Señas del Alfabeto In
 
 ## Resumen general de los datos
 
-El dataset cuenta con un total de 87028 archivos, correspondientes a imágenes en formato .jpg. 
+El dataset cuenta con un total de 87028 archivos, correspondientes a imágenes en formato .jpg.
 
 ## Resumen de calidad de los datos
 
@@ -34,6 +34,6 @@ Por otro lado, los valores atípicos asociados a la desviación estándar se deb
 
 Las estrategias de pre-procesamiento que se utilizarán dadas tanto las características de los datos como la tarea a ejecutar (crear un sistema que permita clasificar fotos nuevas subidas por el usuario y las clasifique entre las señas del alfabeto del Lenguaje de Señas Americano) son:
 
-* Eliminar fondo  
-* Recortar parte principal de la imagen  
-* Redimensionar la imagen  
+* Eliminar fondo
+* Recortar parte principal de la imagen
+* Redimensionar la imagen
