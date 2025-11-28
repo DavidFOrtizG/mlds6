@@ -1,27 +1,39 @@
+
 # Reporte de Datos
 
-Este documento contiene los resultados del análisis exploratorio de datos.
+Este Dataset contiene imágenes de señas del Lenguaje de Señas del Alfabeto Ingles, para 29 clases, 26 de ellas para las letras de la A a la Z, y 3 adicionales para el carácter 'del' o eliminar, 'space' o espacio, 'nothing' para una imagen sin señas.
 
 ## Resumen general de los datos
 
-En esta sección se presenta un resumen general de los datos. Se describe el número total de observaciones, variables, el tipo de variables, la presencia de valores faltantes y la distribución de las variables.
+El dataset cuenta con un total de 87028 archivos, correspondientes a imágenes en formato .jpg. 
 
 ## Resumen de calidad de los datos
 
-En esta sección se presenta un resumen de la calidad de los datos. Se describe la cantidad y porcentaje de valores faltantes, valores extremos, errores y duplicados. También se muestran las acciones tomadas para abordar estos problemas.
+Todos los archivos pueden ser leídos como imágenes, además en las etiquetas no se tienen valores nulos o faltantes. Todas las imágenes tienen un tamaño de 200x200 pixeles.
 
 ## Variable objetivo
 
-En esta sección se describe la variable objetivo. Se muestra la distribución de la variable y se presentan gráficos que permiten entender mejor su comportamiento.
+Las imágenes están clasificadas en las etiquetas 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' 'I' 'J' 'K' 'L' 'M' 'N' 'O' 'P'
+ 'Q' 'R' 'S' 'T' 'U' 'V' 'W' 'X' 'Y' 'Z' 'del' 'space' 'nothing'. Estas están perfectamente balanceadas como se ve a continuación:
+
+![Distribucion_Etiquetas](imagenes/Distribucion_etiqueta.JPG)
 
 ## Variables individuales
 
-En esta sección se presenta un análisis detallado de cada variable individual. Se muestran estadísticas descriptivas, gráficos de distribución y de relación con la variable objetivo (si aplica). Además, se describen posibles transformaciones que se pueden aplicar a la variable.
+En cuanto a la distribución de los pixeles de las imágenes se evidencia que no existen valores atípicos en relación al promedio pero sí en relación a la desviación estándar:
 
-## Ranking de variables
+![Distribucion_pixeles](imagenes/Distribucion_pixeles.JPG)
 
-En esta sección se presenta un ranking de las variables más importantes para predecir la variable objetivo. Se utilizan técnicas como la correlación, el análisis de componentes principales (PCA) o la importancia de las variables en un modelo de aprendizaje automático.
+Esto puede explicarse porque al parecer todas las fotos fueron tomadas en la misma habitación, con la misma iluminación y las señas son realizadas por la misma persona, por lo tanto, el promedio de los pixeles es similar entre imágenes:
 
-## Relación entre variables explicativas y variable objetivo
+![Muestra_imagenes](imagenes/Muestra_imagenes.JPG)
 
-En esta sección se presenta un análisis de la relación entre las variables explicativas y la variable objetivo. Se utilizan gráficos como la matriz de correlación y el diagrama de dispersión para entender mejor la relación entre las variables. Además, se pueden utilizar técnicas como la regresión lineal para modelar la relación entre las variables.
+Por otro lado, los valores atípicos asociados a la desviación estándar se deben a imágenes con alto contraste, específicamente a imágenes donde la mano se ve oscura, mientras que el fondo de la habitación en todas las imágenes está bien iluminado:
+
+![Outliers_desviacion](imagenes/Outliers_desviacion.JPG)
+
+Las estrategias de pre-procesamiento que se utilizarán dadas tanto las características de los datos como la tarea a ejecutar (crear un sistema que permita clasificar fotos nuevas subidas por el usuario y las clasifique entre las señas del alfabeto del Lenguaje de Señas Americano) son:
+
+* Eliminar fondo  
+* Recortar parte principal de la imagen  
+* Redimensionar la imagen  
