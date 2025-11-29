@@ -92,7 +92,7 @@ def preprocess_all(raw, output, workers=8):
                 tasks.append((in_path, out_path))
 
     print(f"\nTotal imágenes encontradas: {len(tasks)}\n")
-    print(f"Iniciando procesamiento con {workers} hilos (GPU/CUDA)...")
+    print(f"Iniciando procesamiento")
 
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = [executor.submit(process_single_file, t) for t in tasks]
@@ -175,10 +175,10 @@ def h5_files_train_val_test(origin_path, destination_path):
     print("Test data saved in ", destination_path+"test.hdf5")
 
 if __name__ == "__main__":
-    print("Starting Preprocessing with GPU")
+
     preprocess_all("/content/mlds6/data/raw", "/content/mlds6/data/preprocessed", workers=8)
 
-    print("Compressing output into .tar files")
+    print("\nComprimiendo archivos en formato .tar")
 
     images_path = "/content/mlds6/data/preprocessed/asl-alphabet/asl_alphabet_train/asl_alphabet_train/"
     destination_path = "/content/mlds6/data/hdf5/"
