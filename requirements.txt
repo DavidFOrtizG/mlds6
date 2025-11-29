@@ -11,3 +11,5 @@ rembg[gpu]
 onnxruntime-gpu
 tqdm
 kaggle
+h5py
+pillow
