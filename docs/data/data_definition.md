@@ -14,8 +14,6 @@ Los datos son almacenados en la carpeta `data` del proyecto en su forma sin comp
 
 ### Rutas de origen de datos
 
-- [ ] Especificar la estructura de los archivos de origen de los datos.
-- [ ] Describir los procedimientos de transformación y limpieza de los datos.
 
 Los datos descargados de Kaggle constan de 2 carpetas, una de entrenamiento con 87.000 imagenes, dividas en grupos de 3000 imagenes para cada clases, y una de testeo con una imagen por clase. En el set de entrenamiento se tiene una carpeta por clase conteniendo todas las imagenes de formato `.jpg`
 
