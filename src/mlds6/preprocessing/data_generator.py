@@ -30,6 +30,8 @@ class DataGenerator(keras.utils.Sequence):
         super().__init__(**kwargs)
         self.filepath = filepath
         self.hdf5_file = h5py.File(self.filepath, 'r')
+        self.X_data = self.hdf5_file["images"]
+        self.y_data = self.hdf5_file["classes"]
         self.dim = dim
         self.batch_size = batch_size
         self.mode = mode
@@ -75,8 +77,8 @@ class DataGenerator(keras.utils.Sequence):
     def __data_generation(self, list_IDs_temp):
         'Generates data containing batch_size samples' # X : (n_samples, *dim, n_channels)
         # Initialization
-        X = self.hdf5_file["images"][list_IDs_temp, :, :, :]
-        y = self.hdf5_file["classes"][list_IDs_temp, :]
+        X = self.X_data[list_IDs_temp, :, :, :]
+        y = self.y_data[list_IDs_temp, :]
 
         if self.mode == "train":
             X = self.augmentation_train_fun(X)
