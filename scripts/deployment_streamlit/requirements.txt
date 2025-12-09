@@ -1,0 +1,7 @@
+
+streamlit==1.52.1
+numpy==2.0.2
+pandas==2.2.2
+ImageIO==2.37.2
+pillow==11.3.0
+requests==2.32.4
