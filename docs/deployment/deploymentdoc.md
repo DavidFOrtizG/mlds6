@@ -1,48 +1,56 @@
 
-# Despliegue de modelo (fast-api)
+# Despliegue de modelo (FastAPI + Streamlit)
 
-## Infraestructura
+## Infraestructura Backend (FastAPI + Google Cloud Run)
 
 - **Nombre del modelo:** asl_model
-- **Plataforma de despliegue:** DVC GCP y fast-api
+- **Plataforma de despliegue:** Google Cloud Run
 - **Requisitos técnicos:** (lista de requisitos técnicos necesarios para el despliegue, como versión de Python, bibliotecas de terceros, hardware, etc.)
-- **Requisitos de seguridad:** (lista de requisitos de seguridad necesarios para el despliegue, como autenticación, encriptación de datos, etc.)
-- **Diagrama de arquitectura:** (imagen que muestra la arquitectura del sistema que se utilizará para desplegar el modelo)
+  - Software:
+    - Python 3.12
+    - Keras 3.12.0
+    - TensorFlow 2.20.0
+    - FastAPI 0.124.0
+    - Rembg 2.0.69
+    - Docker 
+    - La lista completa de librerias puede encontrarse en `scripts/deployment_fastapi/requirements.txt`
+  - Cloud:
+    - Instancia de Google Cloud Run con 4 Gb de RAM
+- **Diagrama de arquitectura:**
+  ![Arquitectura](../assets/arquitectura.png)
 
 ## Código de despliegue
 
-- **Archivo principal:** (nombre del archivo principal que contiene el código de despliegue)
-- **Rutas de acceso a los archivos:** (lista de rutas de acceso a los archivos necesarios para el despliegue)
-- **Variables de entorno:** (lista de variables de entorno necesarias para el despliegue)
+- **Archivo principal:** `scripts/deployment_fastapi/main.py`
+- **Rutas de acceso a los archivos:** `scripts/deployment_fastapi`
 
 ## Documentación del despliegue
 
-- **Instrucciones de instalación:** (instrucciones detalladas para instalar el modelo en la plataforma de despliegue)
-- **Instrucciones de configuración:** (instrucciones detalladas para configurar el modelo en la plataforma de despliegue)
-- **Instrucciones de uso:** (instrucciones detalladas para utilizar el modelo en la plataforma de despliegue)
-- **Instrucciones de mantenimiento:** (instrucciones detalladas para mantener el modelo en la plataforma de despliegue)
+**Instrucciones de instalación:** Para el despliegue se construye la imagen con docker y se carga a un reporsitorio en *Docker Hub* 
+  - docker build -t \<usuario\>/\<repositorio\>:<\version\> .
+  - docker push \<usuario\>/\<repositorio\>:<\version\> 
+  
+Para una ejecución local, sin docker se debe contar con python 3.12, instalar lo requisitos encontrados en `scripts/deployment_fastapi/requirements.txt` mediante `pip install -r requirements.txt` dentro de la carpeta de `deployment_fastapi`
+  
+**Instrucciones de configuración:** 
+Se debe crear un servicio de Cloud Run y usar como imagen la cargada a Docker Hub (\<usuario\>/\<repositorio\>:<\version\>) La instancia de Cloud Run debe contar con al menos 4 Gb de RAM, ya que durante las predicciones superar el uso de 2 Gb.   
 
-# Despliegue pagina web (streamlit)
+**Instrucciones de uso:** Se envian las imagenes mediante metodo POST al endpoint `/uploadfile` de la aplicación desplegada. Este retornará un JSON con información basica de la imagen así como las probabilidades generadas por el modelo para cada seña.
 
-## Infraestructura
+**Instrucciones de mantenimiento:** Dependiendo del trafico a la API del modelo y la capacidad de escalamiento configurada para la instancia de Cloud Run, se debe vigilar su disponibilidad.
+
+## Infraestructura Frontend (streamlit)
 
 - **Plataforma de despliegue:** Streamlit Cloud
 
 - **Requisitos técnicos:**
-
-python 3.12
-
-streamlit 1.52.1
-
-numpy 2.0.2
-
-pandas 2.2.2
-
-ImageIO 2.37.2
-
-pillow 11.3.0
-
-requests 2.32.4
+  - python 3.12
+  - streamlit 1.52.1
+  - numpy 2.0.2
+  - pandas 2.2.2
+  - ImageIO 2.37.2
+  - pillow 11.3.0
+  - requests 2.32.4
 
 ## Código de despliegue
 
@@ -69,9 +77,10 @@ Por último, se entrega la respuesta de la predicción por medio de la función 
 
 - **Instrucciones de uso:** 
 
-1. El cliente debe habilitar la camara por medio de un checkbox
-2. Realizar una foto de la mano realizando la seña, es importante que la foto debe ser sólo para la seña y no incluir más elementos
-3. La pagina web comunicara al cliente si la imagen fue almacenada correctamente
-4. El cliente debe apretar el botón "Predecir"
-5. La página web tomara algunos segundos en realizar una predicción, y luego arrojara la predicción de la seña junto con un gráfico de barras con las probabilidades de cada seña.
+1. El cliente accede a la [pagina del servicio](https://hiszc2t3rm4nq7ndvmr5ru.streamlit.app/) 
+2. El cliente debe habilitar la camara por medio de un checkbox
+3. Realizar una foto de la mano realizando la seña, es importante que la foto debe ser sólo para la seña y no incluir más elementos
+4. La pagina web comunicara al cliente si la imagen fue almacenada correctamente
+5. El cliente debe apretar el botón "Predecir"
+6. La página web tomara algunos segundos en realizar una predicción, y luego arrojara la predicción de la seña junto con un gráfico de barras con las probabilidades de cada seña.
 
