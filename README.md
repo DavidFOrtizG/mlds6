@@ -68,4 +68,5 @@ python scripts/evaluation/main.py
 ## Contacto
 
 David Francisco Ortiz Gutiérrez (david.f.ortizg@gmail.com)
+
 Fabián Camilo Rojas Beltrán (fcrojasb@unal.edu.co)
