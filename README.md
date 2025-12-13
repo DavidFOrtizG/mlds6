@@ -1,6 +1,4 @@
-# Team Data Science Project Template
-
-Plantilla de proyecto basada en el Team Data Science Process (TDSP). Provee una estructura reproducible para proyectos de ciencia de datos: adquisición, preprocesamiento, entrenamiento, evaluación y despliegue.
+# Sistema de reconocimiento de señales manuales (Lenguaje de Señas Americano ASL)
 
 Principales secciones del repositorio
 
